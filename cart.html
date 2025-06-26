@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+        .cart-container {
+            width: 80%;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            border-radius: 12px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 14px;
+            text-align: left;
+            border-bottom: 2px solid #eee;
+        }
+        th {
+            background: #007bff;
+            color: white;
+            text-transform: uppercase;
+        }
+        .coupon, .summary {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .coupon {
+            justify-content: flex-start;
+            gap: 10px;
+        }
+        .coupon input {
+            padding: 12px;
+            width: 250px;
+            border: 2px solid #007bff;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        .summary {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            padding: 14px 22px;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        select {
+            padding: 8px;
+            border-radius: 6px;
+            border: 2px solid #007bff;
+        }
+        input[type='number'] {
+            width: 60px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 2px solid #007bff;
+            padding: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cart-container">
+        <h1>Shopping Cart</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <tr>
+                    <td>Whitetails Women's Dress</td>
+                    <td>$80.00</td>
+                    <td><input type="number" value="1" min="1" onchange="updateTotal()"></td>
+                    <td><button onclick="removeItem(this)">X</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="coupon">
+            <input type="text" id="coupon-code" placeholder="Enter Coupon Code">
+            <button onclick="applyCoupon()">Apply</button>
+        </div>
+        <div class="summary">
+            <h2>Summary</h2>
+            <p>Subtotal: <span id="subtotal">$80.00</span></p>
+            <p>Shipping:
+                <select id="shipping" onchange="updateTotal()">
+                    <option value="0">Free Shipping</option>
+                    <option value="20">Flat rate: $20.00</option>
+                    <option value="25">Local pickup: $25.00</option>
+                </select>
+            </p>
+            <h3>Total: <span id="total">$80.00</span></h3>
+            <button onclick="startPayment()">Proceed to Checkout</button>
+        </div>
+    </div>
+    <script>
+        let subtotal = 80;
+        function updateTotal() {
+            let quantity = document.querySelector("input[type='number']").value;
+            let shippingCost = parseInt(document.getElementById("shipping").value);
+            let total = (subtotal * quantity) + shippingCost;
+            document.getElementById("subtotal").innerText = `$${subtotal * quantity}.00`;
+            document.getElementById("total").innerText = `$${total}.00`;
+        }
+        
+        function applyCoupon() {
+            let code = document.getElementById("coupon-code").value;
+            if (code === "DISCOUNT10") {
+                subtotal -= 10;
+                updateTotal();
+                alert("Coupon Applied Successfully!");
+            } else {
+                alert("Invalid Coupon Code");
+            }
+        }
+        
+        function removeItem(button) {
+            button.closest("tr").remove();
+            subtotal = 0;
+            updateTotal();
+        }
+        
+        function startPayment() {
+            let totalAmount = document.getElementById("total").innerText.replace("$", "");
+            let options = {
+                "key": "rzp_test_YourApiKeyHere", // Replace with your Razorpay API Key
+                "amount": totalAmount * 100,
+                "currency": "INR",
+                "name": "Fashion Trends",
+                "description": "Purchase",
+                "image": "logo.png",
+                "handler": function (response) {
+                    alert("Payment Successful! Payment ID: " + response.razorpay_payment_id);
+                },
+                "prefill": {
+                    "name": "Nidhi",
+                    "email": "nidhi@example.com",
+                    "contact": "9876543210"
+                },
+                "theme": {
+                    "color": "#007bff"
+                }
+            };
+            let rzp = new Razorpay(options);
+            rzp.open();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Trends website</title>
+    <!-- Css Link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mukta:wght@200;300;400;500;600;700;800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- cdnj link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- boxicons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- slider link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <!-- header -->
+    <header class="sticky">
+        <a href="#" class="logo"><img src="assets/img/logo.png" alt=""></a>
+        <ul class="navmenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about_us.html">About</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-icon">
+            <a href="#"><i class='bx bx-search'></i></a>
+            <a href="#"><i class='bx bx-user'></i></a>
+            <a href="#"><i class='bx bx-cart'></i></a>
+            <div class="bx bx-menu" id="menu-icon">
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- section start -->
+    <section class="main-home">
+
+        <div class="main-text">
+            <h1>Elevate Your <br> Everyday!</h1>
+            <h5>Discover Deals</h5>
+
+            <a href="#" class="main-btn">Shop Now <i class='bx bx-right-arrow-alt'></i></a>
+        </div>
+
+        <div class="down-arrow">
+            <a href="#trending" class="down"><i class='bx bx-down-arrow-alt'></i></a>
+        </div>
+    </section>
+    <!-- section end -->
+
+    <!-- about  -->
+
+    <!-- <div class="abt">
+        <h3>About Us</h3>
+    </div> -->
+    <section class="about-section">
+        <div class="about-image">
+            <img src="assets/img/abtt.jpg" alt="About Us">
+        </div>
+        <div class="about-content">
+            <h2>About Us & Our Skills</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+            <p class="quote">
+                <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore.
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua ut enim ad minim veniam.</p>
+
+            <div class="social-icon">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-behance"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- about end -->
+
+    <!-- category section -->
+    <div class="category-container">
+        <div class="category-box">
+            <div class="category-text">
+                <h2>Male</h2>
+                <a href="#" class="shop-btn">Shop Now →</a>
+            </div>
+            <div class="category-img">
+                <img src="assets/img/insta-1.jpg" alt="men">
+            </div>
+        </div>
+        <div class="category-box">
+            <div class="category-text">
+                <h2>Kids</h2>
+                <a href="#" class="shop-btn">Shop Now →</a>
+            </div>
+            <div class="category-img">
+                <img src="assets/img/kids.jpg" alt="kids">
+            </div>
+        </div>
+        <div class="category-box">
+            <div class="category-text">
+                <h2>Women</h2>
+                <a href="#" class="shop-btn">Shop Now →</a>
+            </div>
+            <div class="category-img">
+                <img src="assets/img/insta-2.jpg" alt="women">
+            </div>
+        </div>
+    </div>
+
+    <!-- category end -->
+
+    <!-- product-section start -->
+    <section class="trending-product" id="trending">
+        <div class="center-text">
+            <h2>Our Trending <span>products</span></h2>
+        </div>
+        <div class="products">
+            <div class="row">
+                <img src="assets/img/1.jpg" alt="">
+                <div class="product-text">
+                    <h5>Sale</h5>
+                </div>
+                <div class="heart-icon">
+                    <i class='bx bx-heart'></i>
+                </div>
+                <div class="rating">
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <div class="price">
+                    <h4>Summer Breeze Outfit</h4>
+                    <p>$99 - $129</p>
+                </div>
+
+            </div>
+            <div class="row">
+                <img src="assets/img/5.jpg" alt="">
+                <div class="product-text">
+                    <h5>New</h5>
+                </div>
+                <div class="heart-icon">
+                    <i class='bx bx-heart'></i>
+                </div>
+                <div class="rating">
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <div class="price">
+                    <h4>Breeze Top & Denim</h4>
+                    <p>$99 - $129</p>
+                </div>
+
+            </div>
+            <div class="row">
+                <img src="assets/img/3.jpg" alt="">
+                <!-- <div class="product-text">
+                    <h5>Sale</h5>
+                </div> -->
+                <div class="heart-icon">
+                    <i class='bx bx-heart'></i>
+                </div>
+                <div class="rating">
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <div class="price">
+                    <h4>Pink Paradise</h4>
+                    <p>$99 - $129</p>
+                </div>
+
+            </div>
+            <div class="row">
+                <img src="assets/img/4.jpg" alt="">
+                <div class="product-text">
+                    <h5>Hot</h5>
+                </div>
+                <div class="heart-icon">
+                    <i class='bx bx-heart'></i>
+                </div>
+                <div class="rating">
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <div class="price">
+                    <h4>Floral Sunshine Maxi</h4>
+                    <p>$99 - $129</p>
+                </div>
+            </div>
+            <div class="row">
+                <img src="assets/img/men3.png" alt="">
+                <!-- <div class="product-text">
+                    <h5>Sale</h5>
+                </div> -->
+                <div class="heart-icon">
+                    <i class='bx bx-heart'></i>
+                </div>
+                <div class="rating">
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <div class="price">
+                    <h4>Fit Casual Shirt</h4>
+                    <p>$99 - $129</p>
+                </div>
+            </div>
+            <div class="row">
+                <img src="assets/img/kids2.jpg" alt="">
+                <div class="product-text">
+                    <h5>Sale</h5>
+                </div>
+                <div class="heart-icon">
+                    <i class='bx bx-heart'></i>
+                </div>
+                <div class="rating">
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <div class="price">
+                    <h4>Fancy Salwar Suits</h4>
+                    <p>$99 - $129</p>
+                </div>
+            </div>
+            <div class="row">
+                <img src="assets/img/kids3.jpg" alt="">
+                <div class="product-text">
+                    <h5>Sale</h5>
+                </div>
+                <div class="heart-icon">
+                    <i class='bx bx-heart'></i>
+                </div>
+                <div class="rating">
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <div class="price">
+                    <h4>Printed Straight Kurta</h4>
+                    <p>$99 - $129</p>
+                </div>
+            </div>
+            <div class="row">
+                <img src="assets/img/men5.png" alt="">
+                <div class="product-text">
+                    <h5>Sale</h5>
+                </div>
+                <div class="heart-icon">
+                    <i class='bx bx-heart'></i>
+                </div>
+                <div class="rating">
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <div class="price">
+                    <h4>Collot Full Dress</h4>
+                    <p>$99 - $129</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- product-section end -->
+
+    <!-- slider section -->
+    <div class="section">
+        <h2>Women's Latest</h2>
+        <p>Discover trendy, stylish, and comfortable fashion for every occasion.</p>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="assets/img/1.jpg" alt="Classic Spring">
+                    <div class="product-title">Summer Breeze Outfit</div>
+                    <div class="product-price">$120.00</div>
+                    <!-- <button class="add-to-cart"><a href="cart.html">Add to card</a></button> -->
+                    <button class="add-to-cart"><a href="cart.html">Add to Cart</a></button>
+
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/img/2.jpg" alt="New Green Jacket">
+                    <div class="product-title">Street Safari</div>
+                    <div class="product-price">$75.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/img/3.jpg" alt="Classic Dress">
+                    <div class="product-title">Pink Paradise</div>
+                    <div class="product-price">$45.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/img/4.jpg" alt="Trendy Look">
+                    <div class="product-title">Floral Sunshine Maxi</div>
+                    <div class="product-price">$90.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/img/5.jpg" alt="Elegant Outfit">
+                    <div class="product-title">Breeze Top & Denim</div>
+                    <div class="product-price">$110.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Men's Latest</h2>
+        <p>Discover trendy, stylish, and comfortable fashion for every occasion!</p>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="assets/img/men1.jpeg" alt="Classic Spring">
+                    <div class="product-title">Classic Spring</div>
+                    <div class="product-price">$120.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/img/men2.png" alt="New Green Jacket">
+                    <div class="product-title">Casual Chambray Shirt</div>
+                    <div class="product-price">$75.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/img/men3.png" alt="Classic Dress">
+                    <div class="product-title">Fit Casual Shirt</div>
+                    <div class="product-price">$45.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/img/men4.png" alt="Trendy Look">
+                    <div class="product-title">Casual Safari Shirt</div>
+                    <div class="product-price">$90.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/img/men5.png" alt="Elegant Outfit">
+                    <div class="product-title">Oversized Cuban Shirt</div>
+                    <div class="product-price">$110.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Kid's Latest</h2>
+        <p>Discover trendy, stylish, and comfortable fashion for every occasion!</p>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="assets/img/kids1.jpg" alt="Classic Spring">
+                    <div class="product-title">Playful Safari Set</div>
+                    <div class="product-price">$120.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/img/kids2.jpg" alt="New Green Jacket">
+                    <div class="product-title">Pastel Bliss Frock </div>
+                    <div class="product-price">$75.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/img/kids3.jpg" alt="Classic Dress">
+                    <div class="product-title">Brown Blaze Shirt</div>
+                    <div class="product-price">$45.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/img/kids4.jpg" alt="Trendy Look">
+                    <div class="product-title">Sunshine Blossom Set</div>
+                    <div class="product-price">$90.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/img/kids5.jpg" alt="Elegant Outfit">
+                    <div class="product-title">Blue Breeze Outfit </div>
+                    <div class="product-price">$110.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+        </div>
+    </div>
+
+
+    <!-- slider end -->
+
+
+
+
+
+    <!-- client-review-section -->
+
+    <section class="client-reviews">
+        <div class="review">
+            <h3>Client Review</h3>
+            <img src="assets/img/review(2).jpg" alt="">
+            <p> The site is easy to navigate, and the product selection is impressive. Checkout was quick and secure,
+                and my order arrived <br> on time and in perfect condition. Customer service was responsive and helpful.
+                Highly recommend!
+            </p>
+            <h2>Mark Jevenue</h2>
+            <p>CEO of Addle</p>
+        </div>
+    </section>
+    <!-- client-section-end -->
+
+    <!-- Blog-section -->
+    <div class="blog-container">
+        <div class="blog-subtitle">Our Blog & News</div>
+        <div class="blog-header">Latest News & Articles</div>
+        <div class="blog-wrapper">
+            <div class="blog-card">
+                <img src="assets/img/bl-1.png" alt="Blog 1">
+                <div class="blog-content">
+                    <div class="blog-date">20 July, 2023</div>
+                    <div class="blog-meta">Fashion, Life Style, News</div>
+                    <div class="blog-title">The 'Boomerang' Employees Returning After Quitting</div>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="assets/img/bl-2.jpg" alt="Blog 2">
+                <div class="blog-content">
+                    <div class="blog-date">18 March, 2023</div>
+                    <div class="blog-meta">Fashion, Life Style, News</div>
+                    <div class="blog-title">Fast fashion: How clothes are linked to climate change</div>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="assets/img/bl-3.png" alt="Blog 3">
+                <div class="blog-content">
+                    <div class="blog-date">15 February, 2023</div>
+                    <div class="blog-meta">Fashion, Life Style, News</div>
+                    <div class="blog-title">The Sound Of Fashion: Malcolm McLaren Words</div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="discover-btn">Discover More</a>
+    </div>
+
+
+
+    <!-- <section id="blog">
+        <div class="blog-heading">
+            <h3>News & Blog Update</h3>
+        </div>
+
+        <div class="blog-container">
+            <div class="blog-cart">
+
+                <div class="blog-img">
+                    <img src="assets/img/blog1.jpg" alt="">
+                </div>
+                <div class="blog-text">
+                    <span>18 June 2023</span>
+                    <a href="#" class="title">Responsive Design: A Game-Changer for Your E-Commerce Website</a>
+                    <p>In today's competitive digital landscape, the design of your e-commerce website can make or break
+                        your business.</p>
+                    <a href="#">Read More...</a>
+                </div>
+            </div>
+            <div class="blog-cart">
+
+                <div class="blog-img">
+                    <img src="assets/img/blog2.jpg" alt="">
+                </div>
+                <div class="blog-text">
+                    <span>18 June 2023</span>
+                    <a href="#" class="title">Responsive Design: A Game-Changer for Your E-Commerce Website</a>
+                    <p>In today's competitive digital landscape, the design of your e-commerce website can make or break
+                        your business.</p>
+                    <a href="#">Read More...</a>
+                </div>
+            </div>
+            <div class="blog-cart">
+
+                <div class="blog-img">
+                    <img src="assets/img/blog3.jpg" alt="">
+                </div>
+                <div class="blog-text">
+                    <span>18 June 2023</span>
+                    <a href="#" class="title">Responsive Design: A Game-Changer for Your E-Commerce Website</a>
+                    <p>In today's competitive digital landscape, the design of your e-commerce website can make or break
+                        your business.</p>
+                    <a href="#">Read More...</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- blog-section-end -->
+
+
+    <!-- gallery section -->
+    <div class="insta-section">
+        <div class="insta-box">
+            <img src="assets/img/insta-1.jpg" alt="Fashion Image">
+            <div class="insta-overlay">
+                <a href="https://www.instagram.com/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="insta-box">
+            <img src="assets/img/insta-2.jpg" alt="Fashion Image">
+            <div class="insta-overlay">
+                <a href="https://www.instagram.com/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="insta-center">
+            <div>
+                <i class="fab fa-instagram"></i>
+                <p>Follow Us on <br><strong>Instagram</strong></p>
+            </div>
+        </div>
+        <div class="insta-box">
+            <img src="assets/img/insta-3.jpg" alt="Fashion Image">
+            <div class="insta-overlay">
+                <a href="https://www.instagram.com/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="insta-box">
+            <img src="assets/img/insta-4.jpg" alt="Fashion Image">
+            <div class="insta-overlay">
+                <a href="https://www.instagram.com/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- gallery section end -->
+
+    <!-- feature -->
+
+    <div class="features-container">
+        <div class="feature-item">
+            <i class="fas fa-truck"></i>
+            <div class="feature-text">
+                <h3>Free Delivery</h3>
+                <p>Orders from all items</p>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="feature-item">
+            <i class="fas fa-dollar-sign"></i>
+            <div class="feature-text">
+                <h3>Return & Refund</h3>
+                <p>Money back guarantee</p>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="feature-item">
+            <i class="fas fa-percent"></i>
+            <div class="feature-text">
+                <h3>Member Discount</h3>
+                <p>On every order over $140.00</p>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="feature-item">
+            <i class="fas fa-headset"></i>
+            <div class="feature-text">
+                <h3>Support 24/7</h3>
+                <p>Contact us 24 hours a day</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- feature end -->
+
+    <!-- contact-section -->
+    <section class="contact">
+        <div class="contact-info">
+            <div class="first-info">
+                <img src="assets/img/logo.png" alt="">
+
+                <p>3245 Grant Street Longview <br> TX United Kingdom 765378</p>
+                <p>6578953307</p>
+                <p>nidhirathor@gmail.com</p>
+
+                <div class="social-icons">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+
+            <div class="second-info">
+                <h4>Quick Links</h4>
+                <p>Home</p>
+                <p>About us</p>
+                <p>Services</p>
+                <p>Privacy Policy</p>
+                <p>Contact Us</p>
+            </div>
+
+            <div class="third-info">
+                <h4>Shop</h4>
+                <p>Men's Shopping</p>
+                <p>Women's Shopping</p>
+                <p>Kid's Shopping</p>
+                <p>Furniture</p>
+                <p>Discount</p>
+            </div>
+
+            <div class="fourth-info">
+                <h4>Our Services</h4>
+                <p>Web Design</p>
+                <p>Web Development</p>
+                <p>Product Management</p>
+                <p>Marketing</p>
+                <p>Graphic Design</p>
+            </div>
+
+            <div class="five">
+                <h4>Subscribe</h4>
+                <p>Recieve Updates <br>Hot Deals <br>Discount Sent Straight In Your In</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <!-- <p>Copyright @2024. All Rights Reserved. Designed By Nidhi Rathor</p> -->
+        <p>Designed By Nidhi Rathor</p>
+    </div>
+
+    <!-- contact-section end -->
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1, 
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 3000,  // Auto-slide har 3s me hoga
+                disableOnInteraction: false
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                600: { slidesPerView: 2 },  /* 600px ke baad 2 cards */
+                980: { slidesPerView: 3 }   /* 980px ke baad 3 cards */
+            }
+        });
+    </script> -->
+    <script src="assets/js/style.js"></script>
+</body>
+
+</html>
